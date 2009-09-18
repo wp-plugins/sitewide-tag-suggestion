@@ -25,7 +25,7 @@ Add the following stuff, ***making sure to change the number following
 to the numerical blog id of your Sitewide Tags blog.***
 
 
-	// Additions for sitewide tag suggestions begin here
+`	// Additions for sitewide tag suggestions begin here
 
 	case 'get-tagcloud2' :
 	if ( !current_user_can( 'edit_posts' ) )
@@ -60,13 +60,13 @@ to the numerical blog id of your Sitewide Tags blog.***
 	exit;
 	break;
 
-	// End additions
+	// End additions`
 1. Open wp-admin/edit-form-advanced.php. (Have you backed it up yet?) Find the line that says
-	<p class="tagcloud-link hide-if-no-js"><a href="#titlediv" class="tagcloud-link" id="link-<?php echo $tax_name; ?>"><?php printf( __('Choose from the most used tags in %s'), $box['title'] ); ?></a></p>
+	`<p class="tagcloud-link hide-if-no-js"><a href="#titlediv" class="tagcloud-link" id="link-<?php echo $tax_name; ?>"><?php printf( __('Choose from the most used tags in %s'), $box['title'] ); ?></a></p>`
 First, if you'd like to change this line's text to more clearly distinguish between the current blog's tags and the sitewide tags, you might consider replacing that line with the following:
-	<p class="tagcloud-link hide-if-no-js"><a href="#titlediv" class="tagcloud-link" id="link-<?php echo $tax_name; ?>"><?php printf( __('Choose from the most used tags on this blog'), $box['title'] ); ?></a></p>
+	`<p class="tagcloud-link hide-if-no-js"><a href="#titlediv" class="tagcloud-link" id="link-<?php echo $tax_name; ?>"><?php printf( __('Choose from the most used tags on this blog'), $box['title'] ); ?></a></p>`
 After that line, add the following markup, which creates a link for your sitewide tags. You'll want to change my link text ("...all Commons blogs") to reflect your own site:
-	<p class="tagcloud2-link hide-if-no-js"><a href="#titlediv" class="tagcloud2-link" id="link2-<?php echo $tax_name; ?>"><?php printf( __('Choose from the most used tags in all Commons blogs'), $box['title'] ); ?></a></p>
+	`<p class="tagcloud2-link hide-if-no-js"><a href="#titlediv" class="tagcloud2-link" id="link2-<?php echo $tax_name; ?>"><?php printf( __('Choose from the most used tags in all Commons blogs'), $box['title'] ); ?></a></p>`
 
 */
 
